@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Funding Rates Arbitrage</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+    </head>
+<body>
+    <h1>
+        <img src="{{ url_for('static', filename='images/swiper-logo.png') }}" class="logo-swiper" alt="Swiper Logo">
+        DEX FUNDING TABLE
+    </h1>
+    <div class="filters-container">
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search..." />
+        </div>
+      
+        <div class="spread-mode-wrapper">
+          <div class="spread-input-wrapper">
+            <button id="decreaseSpread">-</button>
+            <input type="number" id="spreadInput" placeholder="Min. Diff %" />
+            <button id="increaseSpread">+</button>
+          </div>
+          <div class="mode-toggle">
+            <button id="mode8h">8h</button>
+            <button id="mode1h">1h</button>
+          </div>
+        </div>
+      </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>
+                        <img src="{{ url_for('static', filename='images/backpack-logo.png') }}" class="logo" alt="Backpack">
+                        Backpack
+                    </th>
+                    <th>
+                        <img src="{{ url_for('static', filename='images/lighter-logo.png') }}" class="logo" alt="Lighter">
+                        Lighter
+                    </th>
+                    <th>
+                        <img src="{{ url_for('static', filename='images/hyper-logo.png') }}" class="logo" alt="Hyperliquid">
+                        Hyperliquid
+                    </th>
+                    <th>Max Diff %</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Данные будут вставляться сюда через AJAX -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

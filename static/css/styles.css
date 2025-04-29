@@ -1,0 +1,246 @@
+body {
+    background-color: #0b0f2a;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Скрыть стрелочки для input типа number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    margin: 20 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.filters-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Обёртка для диффа и переключателей */
+.spread-mode-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.search-container, .spread-mode-wrapper {
+    flex: 1;
+    min-width: 0;
+}
+
+.search-container input {
+    width: 80%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #151a40;
+    color: #ffffff;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+}
+
+/* Блок обёртки для input диффа и +/- */
+.spread-input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #151a40;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    flex: 1;
+}
+
+.spread-input-wrapper button {
+    background-color: #1a1f47;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.spread-input-wrapper button:hover {
+    background-color: #2b3160;
+}
+
+.spread-input-wrapper input {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    padding: 12px 0;
+}
+
+.spread-input-wrapper input:focus {
+    outline: none;
+}
+
+/* Стили для кнопок режима 1h / 8h */
+.mode-toggle {
+    display: flex;
+    gap: 10px;
+}
+
+.mode-toggle button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1a1f47;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mode-toggle button:hover {
+    background-color: #2b3160;
+}
+
+.mode-toggle button.active {
+    background-color: #4a61dd;
+    color: #ffffff;
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #151a40;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #1f2559;
+    font-size: 16px;
+    color: #d6d6f0;
+}
+
+tr:nth-child(even) {
+    background-color: #1a1f47;
+}
+
+tr:hover {
+    background-color: #2b3160;
+}
+
+.positive {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.negative {
+    color: #f44336;
+    font-weight: bold;
+}
+
+.neutral {
+    color: #cccccc;
+}
+
+/* Логотипы */
+.logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.logo-swiper {
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+}
+
+th img.logo {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Подвал */
+.site-footer {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #121212;
+    color: #ccc;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 0 0 12px 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.site-footer .footer-content a {
+    margin: 0 10px;
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.site-footer .footer-content a:hover {
+    color: #fff;
+}
+
+/* Ссылки */
+.spread-link.neutral {
+    color: #aaa;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .filters-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .spread-mode-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .mode-toggle {
+        justify-content: space-between;
+    }
+}
