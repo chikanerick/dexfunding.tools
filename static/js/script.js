@@ -26,9 +26,9 @@ function updateFundingData() {
                     }
                 }
 
-                const backpackLink = createLink(backpack, "https://trade.backpack.exchange");
-                const lighterLink = createLink(lighter, "https://lighter.trade");
-                const hyperliquidLink = createLink(hyperliquid, "https://hyperliquid.xyz");
+                const backpackLink = createLink(backpack, "https://backpack.exchange/refer/46cb10ac-37db-42fe-b3cc-66866d2fa424");
+                const lighterLink = createLink(lighter, "https://app.lighter.xyz/trade/ETH");
+                const hyperliquidLink = createLink(hyperliquid, "http://app.hyperliquid.xyz/join/SWIPER");
 
                 const maxDiff8h = typeof maxDiff === 'number' ? maxDiff : null;
                 const maxDiffDisplay = maxDiff8h !== null
