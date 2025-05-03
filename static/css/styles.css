@@ -56,6 +56,18 @@ h1 {
     min-width: 0;
 }
 
+.arrow-icon {
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.spread-wrapper {
+    display: inline-flex;
+    align-items: center;
+}
+
 .search-container input {
     width: 80%;
     padding: 12px 20px;
@@ -68,7 +80,7 @@ h1 {
     transition: 0.3s ease;
 }
 
-/* Блок обёртки для input диффа и +/- */
+
 .spread-input-wrapper {
     display: flex;
     align-items: center;
